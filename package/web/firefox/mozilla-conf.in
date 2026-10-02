@@ -102,7 +102,7 @@ mozilla_register() {
 }
 
 mozilla_ver() {
-	moz_ver="`sed -n 's/MOZ_APP_VERSION *= *//p' config/autoconf.mk || true`"
+	moz_ver="`sed -n 's/MOZ_APP_VERSION *= *//p' config/autoconf.mk.in || true`"
 	moz_ver=${moz_ver:-$ver}
 
 	# dynamically inject the actual $libdir we are building with
